@@ -8,8 +8,8 @@ def concat(str1: str, str2: str) -> str:
     Function that takes two strings as arguments and returns their concatenation.
 
     Args:
-        str1 (str): first string.
-        str2 (str): second string.
+        str1 (str): The first string.
+        str2 (str): The second string.
 
     Returns:
         str: The concatenation of the two strings.
