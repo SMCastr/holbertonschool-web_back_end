@@ -15,7 +15,8 @@ async def wait_random(max_delay: int = 10) -> float:
     seconds and eventually returns it.
 
     Args:
-        max_delay (int): The maximum delay (default is 10).
+        max_delay (int): The maximum delay
+        (default is 10).
 
     Returns:
         float: The random delay.
