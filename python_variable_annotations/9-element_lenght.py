@@ -3,7 +3,9 @@
 Module with a function element_length annotated with types
 """
 
+
 from typing import Iterable, Sequence, List, Tuple
+
 
 def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
     """
@@ -14,7 +16,8 @@ def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
         lst (Iterable[Sequence]): An iterable object containing sequences.
 
     Returns:
-        List[Tuple[Sequence, int]]: A list of tuples, each containing an element from 'lst'
+        List[Tuple[Sequence, int]]: A list of tuples,
+        each containing an element from 'lst'
         and its length as an integer.
     """
     return [(i, len(i)) for i in lst]
