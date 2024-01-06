@@ -3,7 +3,9 @@
 Module with a type-annotated function make_multiplier
 """
 
+
 from typing import Callable
+
 
 def make_multiplier(multiplier: float) -> Callable[[float], float]:
     """
@@ -11,14 +13,16 @@ def make_multiplier(multiplier: float) -> Callable[[float], float]:
     a function that multiplies a float by multiplier.
 
     Args:
-        multiplier (float): The multiplier value.
+        multiplier ([[[float): The multiplier value.
 
     Returns:
-        Callable[[float], float]: A function that takes a float and returns the product.
+        Callable[[float], float]: A function that takes a
+        float and returns the product.
     """
     def multiplier_function(x: float) -> float:
         """
-        Inner function that multiplies a float by the multiplier.
+        Inner function that multiplies a float by
+        the multiplier.
 
         Args:
             x (float): The input float.
