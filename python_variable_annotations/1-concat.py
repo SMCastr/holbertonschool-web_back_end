@@ -5,14 +5,6 @@ Module with a type-annotated function concat
 
 def concat(str1: str, str2: str) -> str:
     """
-    Function that takes two strings as
-    arguments and returns their concatenation.
-
-    Args:
-        str1 (str): The first string.
-        str2 (str): The second string.
-
-    Returns:
-        str: The concatenation of str1 and str2.
+    Function that takes two strings as arguments
     """
     return str1 + str2
