@@ -3,8 +3,10 @@
 Module with an asynchronous coroutine for executing multiple coroutines concurrently.
 """
 
+
 import asyncio
 from typing import List
+
 
 wait_random = __import__("0-basic_async_syntax").wait_random
 
@@ -28,6 +30,7 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
 
     # Return the list of delays in ascending order
     return sorted(delays)
+
 
 # Test the asynchronous coroutine
 if __name__ == "__main__":
