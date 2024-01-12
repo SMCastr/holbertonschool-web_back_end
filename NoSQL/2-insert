@@ -4,4 +4,3 @@ db.school.insert(
     name: "Holberton school"
   }
 )
-
