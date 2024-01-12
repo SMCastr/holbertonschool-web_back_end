@@ -10,7 +10,8 @@ async_generator = __import__("0-async_generator").async_generator
 
 
 async def async_comprehension() -> List[float]:
-    """Coroatine that asynchronously collect 10 random numbers
+    """Coroatine that asynchronously
+    collect 10 random numbers
     using an async comprehensions.
     """
 
@@ -19,7 +20,7 @@ async def async_comprehension() -> List[float]:
 
 async def main():
     """Async function to demonstrate the usage of
-    async_comprehension
+    async_comprehension.
     """
     print(await async_comprehension())
 
