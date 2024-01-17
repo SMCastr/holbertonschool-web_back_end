@@ -1,4 +1,4 @@
-// Utilize arrow function syntax for the addNeighborhood method
+// Utilize arrow function syntax for the addNeighborhood method.
 export default function getNeighborhoodsList() {
     this.sanFranciscoNeighborhoods = ['SOMA', 'Union Square'];
 
