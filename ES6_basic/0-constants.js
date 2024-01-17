@@ -1,4 +1,4 @@
-// Use const to declare variables whenever possible
+// Use const to declare whenever possible
 export function taskFirst() {
     const task = 'I prefer const when I can.';
     return task;
