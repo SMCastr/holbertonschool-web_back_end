@@ -1,19 +1,16 @@
-// Use 'const' to instantiate whenever possible
+// Use const to declare variables whenever possible
 export function taskFirst() {
-    const task = "I prefer const when I can.";
-    const task2 = "Also const is a block-scoped variable.";
+    const task = 'I prefer const when I can.';
     return task;
-}
+  }
 
-export function getLast() {
-    return "is okay";
-}
+  export function getLast() {
+    return 'is okay';
+  }
 
-export function taskNext() {
-    // Use 'let' when needs to be reassigned
-    let combination = "But sometimes let";
-    let combination2 = "is okay too.";
+  export function taskNext() {
+    let combination = 'But sometimes let';
     combination += getLast();
 
     return combination;
-}
+  }
