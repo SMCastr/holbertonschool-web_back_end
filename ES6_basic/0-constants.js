@@ -1,12 +1,17 @@
-export default function tasBlock (trueOrfalse) {
-        
-    const task = false;
-    const task2 = true;
-
-    if (trueOrfalse) {
-        task = true;
-        task2 = false;
-    }
-
-    return [task, task2]
-}
+// Use 'const' to instantiate variables whenever possible
+export function taskFirst() {
+    const task = 'I prefer const when I can.';
+    return task;
+  }
+  
+  export function getLast() {
+    return ' is okay';
+  }
+  
+  export function taskNext() {
+    // Use 'let' when the variable needs to be reassigned
+    let combination = 'But sometimes let';
+    combination += getLast();
+  
+    return combination;
+  }
