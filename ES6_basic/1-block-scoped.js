@@ -1,15 +1,16 @@
-// Utilize let and const for block-scoped.
+// conditional block.
+
 export default function taskBlock(trueOrFalse) {
-    // Use let and const instead (block-scoped)
+    // Use 'let' and 'const' for block-scoped
     let task = false;
-    const task2 = true;
-  
+    let task2 = true;
+
     if (trueOrFalse) {
-      // Use let and const instead (block-scoped)
-      let task = true;
-      const task2 = false;
+        // Use 'let' and 'const' for block-scoped
+        let task = true;
+        let task2 = false;
     }
-  
+
+    // Return the values of the outer block-scoped
     return [task, task2];
-  }
-  
+}
