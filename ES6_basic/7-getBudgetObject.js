@@ -1,4 +1,4 @@
-// Use object property value shorthand syntax
+/*Use object property value shorthand syntax*/
 export default function getBudgetObject(income, gdp, capita) {
 	const budget = {
 		income,
