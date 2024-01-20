@@ -1,18 +1,17 @@
-
-// Define the HolbertonClass class
-class HolbertonClass {
-    constructor(size, location) {
+/*Define the HolbertonClass class*/
+export default class HolbertonClass {
+  constructor(size, location) {
       this._size = size;
       this._location = location;
-    }
-
-    valueOf() {
-      return this._size;
-    }
-
-    toString() {
-      return this._location;
-    }
   }
 
-  export default HolbertonClass;
+  [Symbol.toPrimitive](hint) {
+      if (hint === 'number') {
+          return this._size;
+      }
+      if (hint === 'string') {
+          return this._location;
+      }
+      return this;
+  }
+}
