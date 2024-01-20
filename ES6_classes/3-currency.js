@@ -1,26 +1,15 @@
-// Define a class Currency:
-class Currency {
-    constructor(code, name) {
-        if (typeof code === 'string'
-        && typeof name === 'string') {
-            this._code = code;
+/*Define a class Currency*/
+/* eslint-disable */
+export default class HolbertonCourse {
+    constructor(name, length, students) {
+        if (typeof name !== 'string') throw TypeError('Name must be a string'); {
             this._name = name;
         }
-        else {
-            throw TypeError('Invalid attribute type');
+        if (typeof length !== 'number') throw TypeError('Length must be a number'); {
+            this._length = length;
         }
-    }
-
-    get code() {
-        return this._code;
-    }
-
-    set code(newCode) {
-        if (typeof newCode === 'string') {
-            this._code = newCode;
-        }
-        else {
-            throw TypeError('Code must be a string');
+        if (!Array.isArray(students)) throw TypeError('Students must be an array'); {
+            this._students = students;
         }
     }
 
@@ -29,17 +18,30 @@ class Currency {
     }
 
     set name(newName) {
-        if (typeof newName === 'string') {
+        if (typeof newName !== 'string') throw TypeError('Name must be a string'); {
             this._name = newName;
         }
-        else {
-            throw TypeError('Name must be a string');
+    }
+
+
+    get length() {
+        return this._length;
+    }
+
+    set length(newLength) {
+        if (typeof newLength !== 'number') throw TypeError('Length must be a number'); {
+            this._length = newLength;
         }
     }
 
-    displayFullCurrency() {
-        return `${this.name} (${this.code})`;
+
+    get students() {
+        return this._students;
+    }
+
+    set students(newStudents) {
+        if (!Array.isArray(newStudents)) throw TypeError('Students must be an array'); {
+            this._students = newStudents;
+        }
     }
 }
-
-export default Currency;

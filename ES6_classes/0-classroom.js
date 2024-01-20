@@ -1,6 +1,6 @@
-// Class representating a classroom
-export default class Classroom {
-	constructor(masxStudentsSize) {
-		this._maxStudentsSize = maxStudentsSize;
-	}
+/*Class representating a classroom*/
+export default class ClassRoom {
+    constructor(maxStudentsSize) {
+        this._maxStudentsSize = maxStudentsSize;
+    }
 }

@@ -1,15 +1,14 @@
-// Define the class HolbertonsCourse
-class HolbertonsCourse {
+/*Define the class HolbertonsCourse*/
+export default class HolbertonCourse {
     constructor(name, length, students) {
-        if (typeof name == 'string'
-        && typeof length === 'number'
-        && Array.isArray(students)) {
+        if (typeof name !== 'string') throw TypeError('Name must be a string'); {
             this._name = name;
-            this._length = length;
-            this._students = students;
         }
-        else {
-            throw TypeError('Invalid attribute type');
+        if (typeof length !== 'number') throw TypeError('Length must be a number'); {
+            this._length = length;
+        }
+        if (!Array.isArray(students)) throw TypeError('Students must be an array'); {
+            this._students = students;
         }
     }
 
@@ -18,39 +17,30 @@ class HolbertonsCourse {
     }
 
     set name(newName) {
-        if (typeof newName === 'string') {
+        if (typeof newName !== 'string') throw TypeError('Name must be a string'); {
             this._name = newName;
         }
-        else {
-            throw TypeError('Name must be a string');
-        }
     }
+
 
     get length() {
         return this._length;
     }
 
     set length(newLength) {
-        if (typeof newLength === 'number') {
+        if (typeof newLength !== 'number') throw TypeError('Length must be a number'); {
             this._length = newLength;
         }
-        else {
-            throw TypeError('Length must be a number');
-        }
     }
+
 
     get students() {
         return this._students;
     }
 
     set students(newStudents) {
-        if (Array.isArray(newStudents)) {
+        if (!Array.isArray(newStudents)) throw TypeError('Students must be an array'); {
             this._students = newStudents;
-        }
-        else {
-            throw TypeError('Students must be an array');
         }
     }
 }
-
-export default HolbertonsCourse;

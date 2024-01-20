@@ -1,10 +1,10 @@
-// Import Classroom class
-import Classroom from './0-classroom.js';
+/*Import Classroom class*/
+import ClassRoom from './0-classroom';
 
 export default function initializeRooms() {
-    return [
-        new Classroom(19),
-        new Classroom(20),
-        new Classroom(34),
-    ];
+  let room1 = new ClassRoom(19);
+  let room2 = new ClassRoom(20);
+  let room3 = new ClassRoom(34);
+
+  return [room1, room2, room3];
 }
