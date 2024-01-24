@@ -1,4 +1,4 @@
-// function getResponseFromAPI
+/*function getResponseFromAPI*/
 function getResponseFromAPI() {
     // Return a new Promise
     return new Promise((resolve) => {
