@@ -1,6 +1,11 @@
-/* This function returns a promise*/
+/* this return a promise object */
+
 export default function getResponseFromAPI() {
-  return new Promise((resolve) => {
-    resolve();
+  return new Promise((resolve, reject) => {
+    if (true) {
+      resolve();
+    } else {
+      reject();
+    }
   });
 }
