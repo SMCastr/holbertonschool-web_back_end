@@ -1,6 +1,5 @@
 // 2-then.js
 
-
 /**
  * Handles the response from the API promise.
  * @param {Promise} promise - The API promise.
