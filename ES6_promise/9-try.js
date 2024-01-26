@@ -5,6 +5,7 @@
  * @param {Function} mathFunction - Math function to be guarded.
  * @returns {Array} - Array containing the result or error message.
  */
+
 export default function guardrail(mathFunction) {
   const queue = [];
 

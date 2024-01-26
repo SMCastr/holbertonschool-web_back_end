@@ -3,7 +3,6 @@
 
 import { uploadPhoto, createUser } from './utils';
 
-
 /**
  * Handles the profile signup by collectively resolving promises.
  */
