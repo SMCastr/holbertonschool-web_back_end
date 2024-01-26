@@ -1,15 +1,16 @@
 // 4-user-promise.js
 
 /**
- * Returns a resolved promise with an object containing firstName and lastName.
- * @param {string} firstName - The first name.
- * @param {string} lastName - The last name.
- * @returns {Promise} - A resolved promise with an object having firstName and lastName.
+ * Retorna una promesa resuelta con un objeto que contiene los campos firstName y lastName.
+ * @param {string} firstName - El nombre.
+ * @param {string} lastName - El apellido.
+ * @returns {Promise} - Una promesa resuelta con un objeto que tiene los campos firstName y lastName.
  */
 
 export default function signUpUser(firstName, lastName) {
+  // Usando la notación de propiedad abreviada para mejorar la legibilidad
   return Promise.resolve({
-    firstName: firstName,
-    lastName: lastName,
+    firstName,
+    lastName,
   });
 }
