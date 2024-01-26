@@ -1,5 +1,3 @@
-// 6-final-user.js
-
 import signUpUser from './4-user-promise';
 import uploadPhoto from './5-photo-reject';
 
@@ -10,7 +8,6 @@ import uploadPhoto from './5-photo-reject';
  * @param {string} fileName - The name of the file.
  * @returns {Promise} - A promise that resolves to an array of objects with status and value/error.
  */
-
 export default function handleProfileSignup(firstName, lastName, fileName) {
   const promises = [];
 
@@ -22,7 +19,7 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
 
   promises.push(
     uploadPhoto(fileName)
-      .then((result) => ({ status: 'fulfilled', value: result }))
+      .then(() => ({ status: 'fulfilled', value: 'Photo upload successful' }))
       .catch((error) => ({ status: 'rejected', value: error }))
   );
 
