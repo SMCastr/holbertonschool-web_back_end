@@ -1,9 +1,7 @@
 // 6-final-user.js
 
-
 import signUpUser from './4-user-promise';
 import uploadPhoto from './5-photo-reject';
-
 
 /**
  * Handles multiple promises and returns an array of results.
@@ -13,17 +11,20 @@ import uploadPhoto from './5-photo-reject';
  * @returns {Promise} - A promise that resolves to an array of objects with status and value/error.
  */
 
-
 export default function handleProfileSignup(firstName, lastName, fileName) {
   const promises = [];
 
-  promises.push(signUpUser(firstName, lastName)
-    .then((result) => ({ status: 'fulfilled', value: result }))
-    .catch((error) => ({ status: 'rejected', value: error })));
+  promises.push(
+    signUpUser(firstName, lastName)
+      .then((result) => ({ status: 'fulfilled', value: result }))
+      .catch((error) => ({ status: 'rejected', value: error }))
+  );
 
-  promises.push(uploadPhoto(fileName)
-    .then((result) => ({ status: 'fulfilled', value: result }))
-    .catch((error) => ({ status: 'rejected', value: error })));
+  promises.push(
+    uploadPhoto(fileName)
+      .then((result) => ({ status: 'fulfilled', value: result }))
+      .catch((error) => ({ status: 'rejected', value: error }))
+  );
 
   return Promise.allSettled(promises);
 }
