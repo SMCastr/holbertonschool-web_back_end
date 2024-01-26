@@ -2,7 +2,7 @@
 
 /**
  * Function that creates a guardrail around a math function.
- * @param {Function} mathFunction - Math function to be guarded.
+ * @param {Function} mathFunction - The math function to execute.
  * @returns {Array} - Array containing the result or error message.
  */
 
@@ -10,13 +10,13 @@ export default function guardrail(mathFunction) {
   const queue = [];
 
   try {
-    const result = mathFunction();
-    queue.push(result);
+    const value = mathFunction();
+    queue.push(value);
   } catch (error) {
-    queue.push(error.message);
+    queue.push(`Error: ${error.message}`);
   } finally {
     queue.push('Guardrail was processed');
   }
-
+  
   return queue;
 }
