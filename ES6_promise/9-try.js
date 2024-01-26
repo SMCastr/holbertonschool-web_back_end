@@ -1,6 +1,5 @@
 // 9-try.js
 
-
 /**
  * Function that creates a guardrail around a math function.
  * @param {Function} mathFunction - The math function to execute.
