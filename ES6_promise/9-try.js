@@ -6,7 +6,6 @@
  * @param {Function} mathFunction - The math function to execute.
  * @returns {Array} - Array containing the result or error message.
  */
-
 export default function guardrail(mathFunction) {
   const queue = [];
 
@@ -18,6 +17,6 @@ export default function guardrail(mathFunction) {
   } finally {
     queue.push('Guardrail was processed');
   }
-  
+
   return queue;
 }
