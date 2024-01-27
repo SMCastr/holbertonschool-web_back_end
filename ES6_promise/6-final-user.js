@@ -1,3 +1,6 @@
+// 6-final-user.js
+
+
 const signUpUser = require('./4-user-promise');
 const uploadPhoto = require('./5-photo-reject');
 
