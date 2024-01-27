@@ -1,27 +1,11 @@
-import handleProfileSignup from './path-to-your/6-final-user'; // Update the path accordingly
+// 6-final-user.js
+import signUpUser from './4-user-promise';
+import uploadPhoto from './5-photo-reject';
 
-describe('Your test suite', () => {
-  test('handleProfileSignup returns the right array', async () => {
-    const queue = await handleProfileSignup('John', 'Doe', 'Gerald.jpg');
-    expect(queue).toEqual([
-      {
-        status: 'fulfilled',
-        value: {
-          status: 'fulfilled',
-          value: {
-            firstName: 'John',
-            lastName: 'Doe',
-            // Add other properties if any
-          },
-        },
-      },
-      {
-        status: 'fulfilled',
-        value: {
-          status: 'rejected',
-          reason: new Error('Gerald.jpg cannot be processed'),
-        },
-      },
-    ]);
-  });
-});
+export default function handleProfileSignup(firstName, lastName, fileName) {
+  return Promise.allSettled([signUpUser(firstName, lastName), uploadPhoto(fileName)])
+    .then((results) => results.map((result) => ({
+      status: result.status,
+      value: result.status === 'fulfilled' ? result.value : `Error: ${result.reason.message}`,
+    })));
+}
