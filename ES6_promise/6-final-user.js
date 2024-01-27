@@ -1,5 +1,8 @@
-import signUpUser from './4-user-promise';
-import uploadPhoto from './5-photo-reject';
+// 6-final-user.js
+
+
+const signUpUser = require('./4-user-promise');
+const uploadPhoto = require('./5-photo-reject');
 
 /**
  * Handles multiple promises and returns an array of results.
@@ -8,7 +11,7 @@ import uploadPhoto from './5-photo-reject';
  * @param {string} fileName - The name of the file.
  * @returns {Promise} - A promise that resolves to an array of objects with status and value/error.
  */
-export default function handleProfileSignup(firstName, lastName, fileName) {
+module.exports = function handleProfileSignup(firstName, lastName, fileName) {
   const promises = [];
 
   promises.push(
@@ -24,4 +27,4 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
   );
 
   return Promise.allSettled(promises);
-}
+};
