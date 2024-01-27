@@ -1,6 +1,5 @@
 // 6-final-user.js
 
-
 const signUpUser = require('./4-user-promise');
 const uploadPhoto = require('./5-photo-reject');
 
@@ -17,13 +16,13 @@ module.exports = function handleProfileSignup(firstName, lastName, fileName) {
   promises.push(
     signUpUser(firstName, lastName)
       .then((result) => ({ status: 'fulfilled', value: result }))
-      .catch((error) => ({ status: 'rejected', value: error }))
+      .catch((error) => ({ status: 'rejected', reason: error }))
   );
 
   promises.push(
     uploadPhoto(fileName)
-      .then(() => ({ status: 'fulfilled', value: 'Photo upload successful' }))
-      .catch((error) => ({ status: 'rejected', value: error }))
+      .then((result) => ({ status: 'fulfilled', value: result }))
+      .catch((error) => ({ status: 'rejected', reason: error }))
   );
 
   return Promise.allSettled(promises);
