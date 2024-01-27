@@ -1,27 +1,27 @@
-import signUpUser from './4-user-promise';
-import uploadPhoto from './5-photo-reject';
+import handleProfileSignup from './path-to-your/6-final-user'; // Update the path accordingly
 
-/**
- * Handles multiple promises and returns an array of results.
- * @param {string} firstName - The first name.
- * @param {string} lastName - The last name.
- * @param {string} fileName - The name of the file.
- * @returns {Promise} - A promise that resolves to an array of objects with status and value/error.
- */
-export default function handleProfileSignup(firstName, lastName, fileName) {
-  const promises = [];
-
-  promises.push(
-    signUpUser(firstName, lastName)
-      .then((result) => ({ status: 'fulfilled', value: result }))
-      .catch((error) => ({ status: 'rejected', reason: error }))
-  );
-
-  promises.push(
-    uploadPhoto(fileName)
-      .then((result) => ({ status: 'fulfilled', value: result }))
-      .catch((error) => ({ status: 'rejected', reason: error }))
-  );
-
-  return Promise.allSettled(promises);
-}
+describe('Your test suite', () => {
+  test('handleProfileSignup returns the right array', async () => {
+    const queue = await handleProfileSignup('John', 'Doe', 'Gerald.jpg');
+    expect(queue).toEqual([
+      {
+        status: 'fulfilled',
+        value: {
+          status: 'fulfilled',
+          value: {
+            firstName: 'John',
+            lastName: 'Doe',
+            // Add other properties if any
+          },
+        },
+      },
+      {
+        status: 'fulfilled',
+        value: {
+          status: 'rejected',
+          reason: new Error('Gerald.jpg cannot be processed'),
+        },
+      },
+    ]);
+  });
+});
