@@ -5,4 +5,5 @@ const cleanSet = (set, startString) =>
 		.map((value) => value.slice(startString.length))
 		.join('-');
 
+
 export default cleanSet;

@@ -1,4 +1,5 @@
-/* Returns a new ArrayBuffer with an Int8 value at a specific position */
+/* Returns a new ArrayBuffer with an
+Int8 value at a specific position */
 const createInt8TypedArray = (length, position, value) => {
 	if (position >= length) throw new Error('Position outside range');
 	const buffer = new ArrayBuffer(length);

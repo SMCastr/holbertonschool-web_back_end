@@ -7,5 +7,5 @@ const groceriesList = () => new Map([
 	['Banana', 5],
 ]);
 
-export default groceriesList;
 
+export default groceriesList;
