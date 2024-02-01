@@ -1,12 +1,12 @@
-/* Returns a new ArrayBuffer with an
-Int8 value at a specific position */
-const createInt8TypedArray = (length, position, value) => {
-	if (position >= length) throw new Error('Position outside range');
-	const buffer = new ArrayBuffer(length);
-	const view = new DataView(buffer);
-	view.setInt8(position, value);
-	return view;
-};
+/* 5. Change the text */
+// Using document.querySelector to select the element with id 'update_header'
+const updateHeaderElement = document.querySelector('#update_header');
 
-export default createInt8TypedArray;
+// Adding an event listener for a 'click' event on the updateHeaderElement
+updateHeaderElement.addEventListener('click', function() {
+  // Using document.querySelector to select the header element
+  const headerElement = document.querySelector('header');
 
+  // Updating the text content of the header element to 'New Header!!!'
+  headerElement.textContent = 'New Header!!!';
+});
