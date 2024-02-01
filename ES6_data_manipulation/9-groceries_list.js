@@ -1,4 +1,7 @@
-/* Returns a Map of groceries with items and quantities */
+/* Returns a Map of groceries with
+items and quantities */
+
+
 const groceriesList = () => new Map([
 	['Apples', 10],
 	['Tomatoes', 10],
