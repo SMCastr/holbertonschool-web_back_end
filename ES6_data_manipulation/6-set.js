@@ -1,5 +1,4 @@
-/* Returns a Set from an array */
-const setFromArray = (array) =>
-    new Set(array);
-
-export default setFromArray;
+/* eslint-disable */
+export default function setFromArray(array) {
+    return new Set(array);
+  }

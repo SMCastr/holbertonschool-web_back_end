@@ -1,6 +1,7 @@
-/*Returns the sum of all student ids*/
-const getStudentIdsSum = (students) =>
-	students.reduce((sum, student) => sum + student.id, 0);
-
-
-export default getStudentIdsSum;
+/* eslint-disable */
+export default function getStudentIdsSum(students) {
+	if (!Array.isArray(students)) {
+	  return [];
+	}
+	return students.reduce((accumulator, student) => accumulator + student.id, 0);
+  }

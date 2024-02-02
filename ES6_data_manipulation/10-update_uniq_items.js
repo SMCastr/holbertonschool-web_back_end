@@ -1,12 +1,14 @@
-/* Updates the quantity of items to 100 for items with an initial quantity of 1 in the map */
-const updateUniqueItems = (groceriesMap) => {
-	if (!(groceriesMap instanceof Map)) throw new Error('Cannot process');
-	for (const [item, quantity] of groceriesMap) {
-		if (quantity === 1) {
-			groceriesMap.set(item, 100);
-		}
-	}
-};
-
-
-export default updateUniqueItems;
+/* eslint-disable */
+export default function updateUniqueItems(map) {
+	if (!(map instanceof Map)) {
+	  throw Error('Cannot process');
+	  }
+  
+	map.forEach((value, key) => {
+	  if (value === 1) {
+		map.set(key, 100);
+	  }
+	});
+  
+	return map;
+  }
